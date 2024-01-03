@@ -1,0 +1,30 @@
+  <h3 class="text-center ">Modifier Etudiant</h3>
+    <div class="col-md-8 offset-md-3">
+
+<form (ngSubmit)="submitForm()" >
+   <div class="from-group">
+      <label  for="firstName" class="form-label">First Name</label>
+      <input name="firstName" type="text"  class="form-control" id="firstName" [(ngModel)]="employe.firstName">
+
+    </div>
+
+   <div class="from-group">
+    <label  for="lastName" class="form-label">Last Name</label>
+    <input name="lastName" type="lastName" class="form-control" id="lastName" [(ngModel)]="employe.lastName">
+  </div>
+
+  <div class="from-group">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" [(ngModel)]="employe.email">
+
+  </div>
+
+  <!-- <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div> -->
+  <button type="submit" class="btn btn-outline-success">Submit</button>
+</form>
+</div>
+
+

@@ -1,0 +1,20 @@
+<div class="card" style="width: 18rem; margin-left: 30%; margin-top: 10%;">
+  <img class="card-img-top" src="../../../assets/téléchargé (2).png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ etudiantDetails.firstName +" "+ etudiantDetails.lastName }}</h5>
+    <p class="card-text">Etudiant en {{ etudiantDetails.niveau}} </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Niveau : {{ etudiantDetails.niveau}}</li>
+    <li class="list-group-item">Groupe : {{ etudiantDetails.groupe.name}}</li>
+    <li class="list-group-item">Email : {{ etudiantDetails.email}}</li>
+  </ul>
+  <div class="card-body">
+     <span style="margin-right: 50px;">
+        <button class="btn btn-primary" style="margin-right: 10px;">Imprimer</button>
+      </span>
+      <span>
+        <button class="btn btn-danger">Supprimer</button>
+      </span>
+  </div>
+</div>

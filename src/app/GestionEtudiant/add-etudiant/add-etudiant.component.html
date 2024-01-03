@@ -1,0 +1,39 @@
+    <div class="col-md-8 offset-md-3">
+
+<form (ngSubmit)="submitForm()" >
+   <div class="from-group">
+      <label  for="firstName" class="form-label">First Name</label>
+      <input name="firstName" type="text" class="form-control" id="firstName" [(ngModel)]="etudiant.firstName">
+
+    </div>
+
+   <div class="from-group">
+    <label  for="lastName" class="form-label">Last Name</label>
+    <input name="lastName" type="lastName" class="form-control" id="lastName" [(ngModel)]="etudiant.lastName">
+  </div>
+
+  <div class="from-group">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" [(ngModel)]="etudiant.email">
+
+  </div>
+   <div class="from-group">
+    <label for="Niveau" class="form-label">Niveau</label>
+    <input type="Niveau" name="Niveau" class="form-control" id="Niveau" aria-describedby="Niveau" [(ngModel)]="etudiant.niveau">
+
+  </div>
+    <div class="from-group">
+      <label for="id_group" class="form-label">Select Group</label>
+    <select name="id_group" class="form-control" id="id_group" [(ngModel)]="etudiant.id_Groupe">
+        <option *ngFor="let groupe of groupes" [value]="groupe.id">{{ groupe.name }}</option>
+    </select>
+
+  </div>
+
+  <!-- <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div> -->
+  <button type="submit" class="btn btn-outline-success">Submit</button>
+</form>
+</div>
