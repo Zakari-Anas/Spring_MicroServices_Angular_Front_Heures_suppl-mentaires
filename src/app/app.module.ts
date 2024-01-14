@@ -34,6 +34,11 @@ import { UpdateReservationComponent } from './gestion de reservations/update-res
 import { Reservation } from 'src/Models/Reservation';
 import { ReservationDetails } from 'src/Models/ReservationDetails';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ListAbsenceComponent } from "./gestion d'absence/list-absence/list-absence.component";
+import { AddAbsenceComponent } from "./gestion d'absence/add-absence/add-absence.component";
+import { UpdatAbsenceComponent } from "./gestion d'absence/updat-absence/updat-absence.component";
+import { Absence } from 'src/Models/Absence';
+import { AbsenceDetails } from 'src/Models/AbsenceDetails';
 
 @NgModule({
   declarations: [
@@ -60,6 +65,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AddReservationComponent,
     ListReservationComponent,
     UpdateReservationComponent,
+    ListAbsenceComponent,
+    AddAbsenceComponent,
+    UpdatAbsenceComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,6 +84,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     Paiement,
     Reservation,
     ReservationDetails,
+    Absence,
+    AbsenceDetails,
   ],
   bootstrap: [AppComponent]
 })

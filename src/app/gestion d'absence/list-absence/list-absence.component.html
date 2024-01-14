@@ -1,0 +1,50 @@
+<h1 class="text-uppercase text-center font-weight-bold">
+  <h2>Manage <b>Absences</b></h2>
+</h1>
+<a routerLink="/Absence/Add" class="btn btn-secondary">
+  <i class="fas fa-plus"></i>
+</a>
+
+<table class="table table-striped table-bordered table-hover table-sm table-responsive">
+  <thead class="table-dark">
+    <tr>
+      <th>Id</th>
+      <th>Student</th>
+      <th>Group</th>
+      <th>Course</th>
+      <th>Date</th>
+      <th>Justification</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let absence of absencesDetails">
+      <td>{{ absence.id }}</td>
+      <td>{{ absence.etudiant.firstName + " " + absence.etudiant.lastName }}</td>
+      <td>{{ absence.groupe.name }}</td>
+      <td>{{ absence.cours.nom }}</td>
+      <td>{{ absence.horaire | date: 'shortDate' }}</td>
+      <td>{{ absence.justification }}</td>
+      <td>
+        <span class="button-space">
+          <button class="btn btn-outline-success" (click)="updateAbsence(absence.id)">
+            <i class="fas fa-edit"></i>
+          </button>
+          <span class="button-space"></span>
+          <button class="btn btn-outline-danger" (click)="deleteAbsence(absence.id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+  /* Define the button-space class */
+  .button-space {
+    margin-left: 10px; /* Adjust the margin to your preference */
+    display: inline-block; /* Ensures space is visible even if the content is empty */
+  }
+</style>

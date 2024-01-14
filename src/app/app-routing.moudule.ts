@@ -22,6 +22,9 @@ import { UpdateSalleComponent } from "./gestion des salles/update-salle/update-s
 import { ListReservationComponent } from "./gestion de reservations/list-reservation/list-reservation.component";
 import { AddReservationComponent } from "./gestion de reservations/add-reservation/add-reservation.component";
 import { UpdateReservationComponent } from "./gestion de reservations/update-reservation/update-reservation.component";
+import { ListAbsenceComponent } from "./gestion d'absence/list-absence/list-absence.component";
+import { AddAbsenceComponent } from "./gestion d'absence/add-absence/add-absence.component";
+import { UpdatAbsenceComponent } from "./gestion d'absence/updat-absence/updat-absence.component";
 
 
 const routes: Routes = [
@@ -56,6 +59,10 @@ const routes: Routes = [
    {path: 'reservation/Add', component:AddReservationComponent },
     {path: 'reservation/Update/:id', component:UpdateReservationComponent},
     {path: '', redirectTo:'Employee', pathMatch:'full'},
+
+    {path: 'Absence', component:ListAbsenceComponent},
+    {path: 'Absence/Add', component:AddAbsenceComponent},
+    {path: 'Absence/Update/:id', component:UpdatAbsenceComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
