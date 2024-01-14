@@ -1,0 +1,48 @@
+
+<h1 class="text-uppercase text-center font-weight-bold"> <h2>Manage <b>Paiement</b></h2></h1>
+<a href="Paiement/Add" class="btn btn-secondary"> <i class="fas fa-plus"></i></a>
+
+<table class="table table-striped table-bordered table-hover table-sm table-responsive">
+
+    <thead class="table-dark">
+      <tr >
+        <th>Id </th>
+        <th>date de paiement </th>
+        <th>Etudiant</th>
+        <th>Groupe</th>
+
+        <!-- <th>Groupe <input type="number" class="smaller-input"  id="groupId" (input)="filterStudentsByGroup($event)"></th> -->
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody >
+      <tr *ngFor="let paiement of paimebtDetail" style="cursor: pointer;">
+        <td>{{paiement.id}}</td>
+        <td>{{paiement.paymentDate}}</td>
+        <td>{{paiement.etudiant.firstName +" "+ paiement.etudiant.lastName}}</td>
+        <td>{{paiement.groupe.name}}</td>
+        <td>
+          <span class="button-space">
+
+        <td>
+          <span class="button-space">
+
+            <td>
+                  <button class="btn btn-outline-success" (click)="updateEtudiant(paiement.id)" ><i class="fas fa-edit"></i>  </button>
+              <span class="button-space"></span>
+                  <button class="btn btn-outline-danger "(click)="DeleteEtudiant(paiement.id)" ><i class="fas fa-trash-alt"></i> </button>
+
+
+            </td>
+          </span>
+        </td>
+
+
+<style>
+  /* Define the button-space class */
+  .button-space {
+    margin-left: 50px; /* Adjust the margin to your preference */
+    display: inline-block; /* Ensures space is visible even if the content is empty */
+  }
+</style>

@@ -1,13 +1,14 @@
-  <h1  class="text-uppercase text-center font-weight-bold">List Profs</h1>
 
-  <a href="Employee/Add" class="btn btn-secondary">Ajouter</a>
+
+  <h1 class="text-uppercase text-center font-weight-bold"> <h2>List <b> Profs</b></h2></h1>
+  <a href="Employee/Add" class="btn btn-secondary">  <i class="fas fa-plus"></i></a>
 <table class="table table-striped table-bordered table-hover table-sm table-responsive">
 
   <thead class="table-dark">
     <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Mail</th>
+      <th>Prénom</th>
+      <th>Nom</th>
+      <th>Email</th>
       <th></th>
     </tr>
   </thead>
@@ -16,13 +17,13 @@
     <tr *ngFor="let employee of employees">
       <td>{{employee.firstName}}</td>
       <td>{{employee.lastName}}</td>
-      <td>{{employee.email}}</td>
+      <td>  {{employee.email}}</td>
       <td>
         <span class="button-space">
 
-        <td><button class="btn btn-outline-success" (click)="updateEmployee(employee.id)" >Update </button>
+        <td><button class="btn btn-outline-success" (click)="updateEmployee(employee.id)" ><i class="fas fa-edit"></i> </button>
       <span class="button-space"></span>
-        <button class="btn btn-outline-danger " (click)="DeleteEmployee(employee.id)">Delete</button></td>
+        <button class="btn btn-outline-danger " (click)="DeleteEmployee(employee.id)"><i class="fas fa-trash-alt"></i></button></td>
       </span>
       </td>
 

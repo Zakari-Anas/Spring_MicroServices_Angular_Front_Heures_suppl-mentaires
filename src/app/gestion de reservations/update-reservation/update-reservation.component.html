@@ -1,0 +1,31 @@
+
+<!-- Form to add new reservation -->
+  <h3>Add New Reservation</h3>
+  <form class="col-md-8 offset-md-3" (ngSubmit)="saveReservation()">
+
+    <div class="from-group">
+          <label for="id_Prof" class="form-label">Select Prof</label>
+        <select name="id_Prof" class="form-control" id="id_Prof" [(ngModel)]="reservation.id_Prof">
+            <option *ngFor="let prof of profs" [value]="prof.id">{{prof.firstName +" "+ prof.lastName}}</option>
+        </select>
+    </div>
+    <div class="from-group">
+          <label for="id_Salle" class="form-label">Select Salle</label>
+        <select name="id_Salle" class="form-control" id="id_Salle" [(ngModel)]="reservation.id_Salle">
+            <option *ngFor="let salle of salles" [value]="salle.id">{{salle.nom}}</option>
+        </select>
+    </div>
+    <label for="date">Date</label>
+    <input type="date" id="date" name="date" [(ngModel)]="reservation.horaire" required class="form-control">
+
+    <label for="heure_debut">Heure Debut</label>
+    <input type="time" id="heure_debut" name="heure_debut" [(ngModel)]="reservation.heure_debut" required class="form-control">
+
+    <label for="heure_fin">Heure Fin</label>
+    <input type="time" id="heure_fin" name="heure_fin" [(ngModel)]="reservation.heure_fin" required class="form-control">
+
+    <div>
+      <button type="submit" class="btn btn-outline-success">Save</button>
+    </div>
+
+  </form>

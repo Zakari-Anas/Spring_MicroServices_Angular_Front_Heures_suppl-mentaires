@@ -1,0 +1,15 @@
+<div class="col-md-8 offset-md-3">
+  <form (ngSubmit)="addPaiement()">
+    <div class="form-group">
+      <label for="paymentDate" class="form-label">date de paiement </label>
+      <input name="paymentDate" type="date" class="form-control" id="paymentDate" [(ngModel)]="paiement.paymentDate">
+    </div>
+
+      <label for="id_group" class="form-label">Etudiant</label>
+    <select name="id_group" class="form-control" id="id_group" [(ngModel)]="paiement.id_etudiant">
+        <option *ngFor="let etudiant of Etudiants" [value]="etudiant.id">{{ etudiant.firstName + " "+etudiant.lastName  }}</option>
+    </select>
+
+    <button type="submit" class="btn btn-outline-success">Submit</button>
+  </form>
+</div>

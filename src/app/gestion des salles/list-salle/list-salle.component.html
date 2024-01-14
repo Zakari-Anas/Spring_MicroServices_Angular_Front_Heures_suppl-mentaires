@@ -1,0 +1,39 @@
+<h1 class="text-uppercase text-center font-weight-bold"> <h2>List <b> Salles</b></h2></h1>
+<a href="salle/Add" class="btn btn-secondary"><i class="fas fa-plus"></i></a>
+
+<table class="table table-striped table-bordered table-hover table-sm table-responsive">
+  <thead class="table-dark">
+    <tr>
+      <th>Nom</th>
+      <th>Hauteur</th>
+      <th>Largeur</th>
+      <th>Longueur</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let salle of Salles" style="cursor: pointer;">
+      <td>{{ salle.nom }}</td>
+      <td>{{ salle.hauteur }}</td>
+      <td>{{ salle.largeur }}</td>
+      <td>{{ salle.longueur }}</td>
+          <td>
+          <span class="button-space">
+
+        <td>
+          <span class="button-space">
+
+          <td><button class="btn btn-outline-success" (click)="updateSalle(salle.id)" ><i class="fas fa-edit"></i> </button>
+        <span class="button-space"></span>
+          <button class="btn btn-outline-danger "(click)="deleteSalle(salle.id)" > <i class="fas fa-trash-alt"></i></button></td>
+        </span>
+
+
+
+<style>
+  /* Define the button-space class */
+  .button-space {
+    margin-left: 20px; /* Adjust the margin to your preference */
+    display: inline-block; /* Ensures space is visible even if the content is empty */
+  }
+</style>

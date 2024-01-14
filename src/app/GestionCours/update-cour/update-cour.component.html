@@ -1,1 +1,34 @@
-<p>update-cour works!</p>
+    <div class="col-md-8 offset-md-3">
+
+<form (ngSubmit)="saveCours()" >
+   <div class="from-group">
+      <label  for="Name" class="form-label">Nom </label>
+      <input name="Name" type="text" class="form-control" id="Name" [(ngModel)]="cours.nom">
+
+    </div>
+
+   <div class="from-group">
+    <label  for="Duration" class="form-label">Durée </label>
+    <input name="Duration" type="number" class="form-control" id="Duration" [(ngModel)]="cours.duree">
+  </div>
+
+  <!-- <div class="from-group">
+    <label for="Id_Prof" class="form-label">Id Prof</label>
+    <input type="number" name="Id_Prof" class="form-control" id="Id_Prof" aria-describedby="Id_Prof" [(ngModel)]="cours.id_prof">
+
+  </div> -->
+
+   <div class="from-group">
+      <label for="id_group" class="form-label">Select Prof</label>
+    <select name="id_group" class="form-control" id="id_group" [(ngModel)]="cours.id_prof">
+        <option *ngFor="let prof of employe" [value]="prof.id">{{ prof.firstName + " "+ prof.lastName }}</option>
+    </select>
+
+  </div>
+  <!-- <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div> -->
+  <button type="submit" class="btn btn-outline-success">Submit</button>
+</form>
+</div>

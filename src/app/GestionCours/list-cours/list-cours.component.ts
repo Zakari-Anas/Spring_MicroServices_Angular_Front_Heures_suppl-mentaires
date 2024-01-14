@@ -30,6 +30,7 @@ export class ListCoursComponent {
       this.getCourDetails();
     });
   }
+
    updateCour(id: number) {
     this.router.navigate(['Cours/Update', id]);
   }

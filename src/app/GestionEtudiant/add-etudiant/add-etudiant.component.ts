@@ -14,6 +14,7 @@ export class AddEtudiantComponent {
 
     etudiant:Etudiant=new Etudiant();
     groupes: group[] = [];
+    etududiant:Etudiant=new Etudiant();
     constructor(private etudiantService: EtudiantService, private router:Router,private etudiantDetailsService:EtudiantDetailsService) {}
 
     ngOnInit(): void {
@@ -32,4 +33,5 @@ export class AddEtudiantComponent {
             }
             );
         }
+
 }

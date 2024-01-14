@@ -1,0 +1,53 @@
+
+
+<h1 class="text-uppercase text-center font-weight-bold"> <h2>Manage <b>Reservations</b></h2></h1>
+<a href="reservation/Add" class="btn btn-secondary"> <i class="fas fa-plus"></i></a>
+
+<table class="table table-striped table-bordered table-hover table-sm table-responsive">
+
+    <thead class="table-dark">
+      <tr >
+        <th>Id </th>
+        <th>Salle </th>
+        <th>Prof </th>
+        <th>Date </th>
+        <th>Heure Debut </th>
+        <th>Heure Fin</th>
+
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody >
+      <tr *ngFor="let reservation of reservationsDetails">
+          <td>{{ reservation.id }}</td>
+          <td>{{ reservation.salle.nom }}</td>
+          <td>{{ reservation.prof.firstName +" "+  reservation.prof.lastName}}</td>
+          <td>{{ reservation.horaire | date: 'shortDate' }}</td>
+          <td>{{ reservation.heure_debut }}</td>
+          <td>{{ reservation.heure_fin }}</td>
+        <td>
+          <span class="button-space">
+
+            <td>
+                  <button class="btn btn-outline-success" (click)="updateReservation(reservation.id)" ><i class="fas fa-edit"></i>  </button>
+              <span class="button-space"></span>
+                  <button class="btn btn-outline-danger "(click)="DeleteReservation(reservation.id)" ><i class="fas fa-trash-alt"></i> </button>
+
+
+            </td>
+          </span>
+        </td>
+          <!-- Display other properties of ReservationDetails here -->
+        </tr>
+
+
+
+
+<style>
+  /* Define the button-space class */
+  .button-space {
+    margin-left: 50px; /* Adjust the margin to your preference */
+    display: inline-block; /* Ensures space is visible even if the content is empty */
+  }
+</style>

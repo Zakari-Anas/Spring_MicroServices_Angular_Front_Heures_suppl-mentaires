@@ -2,13 +2,13 @@
 
 <form (ngSubmit)="submitForm()" >
    <div class="from-group">
-      <label  for="firstName" class="form-label">First Name</label>
+      <label  for="firstName" class="form-label">Prénom</label>
       <input name="firstName" type="text" class="form-control" id="firstName" [(ngModel)]="etudiant.firstName">
 
     </div>
 
    <div class="from-group">
-    <label  for="lastName" class="form-label">Last Name</label>
+    <label  for="lastName" class="form-label">Nom</label>
     <input name="lastName" type="lastName" class="form-control" id="lastName" [(ngModel)]="etudiant.lastName">
   </div>
 
@@ -23,7 +23,7 @@
 
   </div>
     <div class="from-group">
-      <label for="id_group" class="form-label">Select Group</label>
+      <label for="id_group" class="form-label">Select Groupe</label>
     <select name="id_group" class="form-control" id="id_group" [(ngModel)]="etudiant.id_Groupe">
         <option *ngFor="let groupe of groupes" [value]="groupe.id">{{ groupe.name }}</option>
     </select>

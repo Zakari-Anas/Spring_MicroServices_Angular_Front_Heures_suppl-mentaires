@@ -1,39 +1,48 @@
-  <h1  class="text-uppercase text-center font-weight-bold">List Etudiants</h1>
-  <a href="Etudiant/Add" class="btn btn-secondary">Ajouter</a>
+<!-- YourComponent.html -->
+
+<h1 class="text-uppercase text-center font-weight-bold">
+  <h2>List <b>Etudiants</b></h2>
+</h1>
+
+<a href="Etudiant/Add" class="btn btn-secondary"><i class="fas fa-plus"></i></a>
 
 <table class="table table-striped table-bordered table-hover table-sm table-responsive">
 
-    <thead class="table-dark">
-      <tr >
-        <th>First Name </th>
-        <th>Last Name</th>
-        <th>Mail</th>
-        <th>Niveau</th>
-        <th>Groupe <input type="number" class="smaller-input"  id="groupId" (input)="filterStudentsByGroup($event)"></th>
-        <th></th>
-      </tr>
-    </thead>
+  <thead class="table-dark">
+    <tr>
+      <th>Prénom</th>
+      <th>Nom</th>
+      <th>Email</th>
+      <th>Niveau</th>
+      <th>Groupe
+        <input type="number" class="smaller-input" id="groupId" (input)="filterStudentsByGroup($event)" />
+      </th>
+      <th></th>
+    </tr>
+  </thead>
 
-    <tbody >
-      <tr *ngFor="let etudiant of etudiantDetails" style="cursor: pointer;" (click)="findEtudiantById(etudiant.id)">
-        <td>{{etudiant.firstName}}</td>
-        <td>{{etudiant.lastName}}</td>
-        <td>{{etudiant.email}}</td>
-        <td>{{etudiant.niveau}}</td>
-        <td>{{etudiant.groupe.name}}</td>
-        <td>
-          <span class="button-space">
+  <tbody>
+    <tr *ngFor="let etudiant of etudiantDetails" style="cursor: pointer;" (click)="findEtudiantById(etudiant.id)">
+      <td>{{ etudiant.firstName }}</td>
+      <td>{{ etudiant.lastName }}</td>
+      <td>{{ etudiant.email }}</td>
+      <td>{{ etudiant.niveau }}</td>
+      <td>{{ etudiant.groupe.name }}</td>
+      <td>
+        <span class="button-space">
+          <button class="btn btn-outline-success" (click)="updateEtudiant(etudiant.id)">
+            <i class="fas fa-edit"></i>
+          </button>
+          <span class="button-space"></span>
+          <button class="btn btn-outline-danger" (click)="DeleteEtudiant(etudiant.id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </span>
+      </td>
+    </tr>
+  </tbody>
 
-        <td>
-          <span class="button-space">
-
-            <td>
-                  <button class="btn btn-outline-success" (click)="updateEtudiant(etudiant.id)" >Update </button>
-              <span class="button-space"></span>
-                  <button class="btn btn-outline-danger "(click)="DeleteEtudiant(etudiant.id)" >Delete</button>
-            </td>
-          </span>
-        </td>
+</table>
 
 
 <style>

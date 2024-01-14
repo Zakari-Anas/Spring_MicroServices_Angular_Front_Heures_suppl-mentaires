@@ -1,12 +1,14 @@
-<h1 class="text-uppercase text-center font-weight-bold">List Courses</h1>
-<a href="Cours/Add" class="btn btn-secondary">Add</a>
+
+<h1 class="text-uppercase text-center font-weight-bold"> <h2>List <b> Courses</b></h2></h1>
+<a href="Cours/Add" class="btn btn-secondary"><i class="fas fa-plus"></i></a>
+
 
 <table class="table table-striped table-bordered table-hover table-sm table-responsive">
   <thead class="table-dark">
     <tr>
-      <th>Name</th>
-      <th>Duration</th>
-      <th>Professor</th>
+      <th>Nom</th>
+      <th>Durée</th>
+      <th>Prof</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -21,9 +23,9 @@
         <td>
           <span class="button-space">
 
-          <td><button class="btn btn-outline-success" (click)="updateCour(cours.id)" >Update</button>
+          <td><button class="btn btn-outline-success" (click)="updateCour(cours.id)" ><i class="fas fa-edit"></i> </button>
         <span class="button-space"></span>
-          <button class="btn btn-outline-danger "(click)="deleteCour(cours.id)" >Delete</button></td>
+          <button class="btn btn-outline-danger "(click)="deleteCour(cours.id)" > <i class="fas fa-trash-alt"></i></button></td>
         </span>
 
 

@@ -17,6 +17,8 @@ export class EtudiantListComponent {
   etudiant!:Etudiant;
   id!: number;
 
+
+
   constructor(private etudiantService:EtudiantService,private etudiantDetailsService:EtudiantDetailsService ,private router:Router) { }
 
   ngOnInit(): void {

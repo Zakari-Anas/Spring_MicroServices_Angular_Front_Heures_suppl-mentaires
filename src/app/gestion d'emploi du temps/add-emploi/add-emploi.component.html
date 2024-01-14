@@ -1,0 +1,34 @@
+<div class="col-md-8 offset-md-3">
+
+<h3 class="text-center">Ajouter Emploi</h3>
+<div class="col-md-8 offset-md-3">
+  <form (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label for="heure_debut" class="form-label">Début</label>
+      <input name="heure_debut" type="time" class="form-control" id="heure_debut" [(ngModel)]="Emploi.heure_debut" placeholder="hh:mm:ss">
+    </div>
+
+    <div class="form-group">
+      <label for="heure_fin" class="form-label">Fin</label>
+      <input name="heure_fin" type="time" class="form-control" id="heure_fin" [(ngModel)]="Emploi.heure_fin" placeholder="hh:mm:ss">
+    </div>
+
+      <div class="from-group">
+          <label for="id_group" class="form-label">Select Cours</label>
+        <select name="id_group" class="form-control" id="id_group" [(ngModel)]="Emploi.cours_id">
+            <option *ngFor="let cour of coursDetails" [value]="cour.id">{{cour.nom}}</option>
+        </select>
+        </div>
+      <div class="from-group">
+          <label for="id_group" class="form-label">Select Groupe</label>
+        <select name="id_group" class="form-control" id="id_group" [(ngModel)]="Emploi.groupe_id">
+            <option *ngFor="let groupe of groupes" [value]="groupe.id">{{groupe.name}}</option>
+        </select>
+
+  </div>
+    <button type="submit" class="btn btn-outline-success">Submit</button>
+  </form>
+</div>
+
+
+

@@ -30,8 +30,8 @@ export class AddCourComponent {
             console.log(data);
             // this.goToCoursList();
             this.router.navigate(['/Cours']);
-          },
-          error => console.log(error));
+          });
+
         }
 
       getAllProfesseurs(){

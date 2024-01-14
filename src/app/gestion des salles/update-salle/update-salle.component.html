@@ -1,0 +1,27 @@
+    <div class="col-md-8 offset-md-3">
+
+<form (ngSubmit)="updateSalle()" >
+   <div class="from-group">
+      <label  for="Name" class="form-label">Nom </label>
+      <input name="Name" type="text" class="form-control" id="Name" [(ngModel)]="salle.nom">
+
+    </div>
+
+   <div class="from-group">
+    <label  for="Hauteur" class="form-label">Hauteur </label>
+    <input name="Hauteur" type="number" class="form-control" id="Hauteur" [(ngModel)]="salle.hauteur">
+  </div>
+
+  <div class="from-group">
+    <label  for="largeur" class="form-label">Largeur </label>
+    <input name="largeur" type="number" class="form-control" id="largeur" [(ngModel)]="salle.largeur">
+  </div>
+
+  <div class="from-group">
+    <label  for="longueur" class="form-label">Longueur </label>
+    <input name="longueur" type="number" class="form-control" id="longueur" [(ngModel)]="salle.longueur">
+  </div>
+
+  <button type="submit" class="btn btn-outline-success">Submit</button>
+</form>
+</div>

@@ -1,0 +1,27 @@
+    <div class="col-md-8 offset-md-3">
+
+<form (ngSubmit)="addSalle()" >
+   <div class="from-group">
+      <label  for="Name" class="form-label">Nom </label>
+      <input name="Name" type="text" class="form-control" id="Name" [(ngModel)]="salle.nom">
+
+    </div>
+
+   <div class="from-group">
+    <label  for="Duration" class="form-label">Hauteur </label>
+    <input name="Duration" type="number" class="form-control" id="Duration" [(ngModel)]="salle.hauteur">
+  </div>
+
+  <div class="from-group">
+    <label  for="Duration" class="form-label">Largeur </label>
+    <input name="Duration" type="number" class="form-control" id="Duration" [(ngModel)]="salle.largeur">
+  </div>
+
+  <div class="from-group">
+    <label  for="Duration" class="form-label">Longueur </label>
+    <input name="Duration" type="number" class="form-control" id="Duration" [(ngModel)]="salle.longueur">
+  </div>
+
+  <button type="submit" class="btn btn-outline-success">Submit</button>
+</form>
+</div>

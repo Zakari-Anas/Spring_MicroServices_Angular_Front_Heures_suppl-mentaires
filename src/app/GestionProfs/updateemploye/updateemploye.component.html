@@ -1,20 +1,20 @@
-  <h3 class="text-center ">Modifier Etudiant</h3>
+  <h3 class="text-center ">Modifier Prof</h3>
     <div class="col-md-8 offset-md-3">
 
 <form (ngSubmit)="submitForm()" >
    <div class="from-group">
-      <label  for="firstName" class="form-label">First Name</label>
+      <label  for="firstName" class="form-label">Prénom</label>
       <input name="firstName" type="text"  class="form-control" id="firstName" [(ngModel)]="employe.firstName">
 
     </div>
 
    <div class="from-group">
-    <label  for="lastName" class="form-label">Last Name</label>
+    <label  for="lastName" class="form-label">Nom</label>
     <input name="lastName" type="lastName" class="form-control" id="lastName" [(ngModel)]="employe.lastName">
   </div>
 
   <div class="from-group">
-    <label for="email" class="form-label">Email address</label>
+    <label for="email" class="form-label">Email</label>
     <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" [(ngModel)]="employe.email">
 
   </div>
